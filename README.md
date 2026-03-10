@@ -6,7 +6,7 @@ Data platform for **Spanish Public Procurement Data (SPPD)**. Orchestrates Airfl
 
 | Stage | Tool | Description |
 |-------|------|-------------|
-| **Extract** | [sppd-cli](https://github.com/Alvaro2c/sppd-cli) | Downloads XML from the Spanish procurement API (minor contracts and public tenders) |
+| **Extract** | [sppd-cli](https://github.com/acarranzac/sppd-cli) | Downloads XML from the Spanish procurement API (minor contracts and public tenders) |
 | **Transform** | sppd-cli | Converts XML to Parquet; stored under `data/parquet/{mc,pt}/{period}/` |
 | **Load** | dbt | Loads Parquet into DuckDB's `bronze` schema as `{type}_{period}` tables (e.g. `bronze.mc_202602`, `bronze.pt_2023`) |
 
